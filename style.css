@@ -1,0 +1,316 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0C0A09;
+      color: #EFE7DF;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, .serif, .logo-text {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    /* custom scroll */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1E1A17;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D4AF7A;
+      border-radius: 10px;
+    }
+
+    /* navigation */
+    .navbar {
+      background: rgba(12, 10, 9, 0.96);
+      backdrop-filter: blur(18px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(212, 175, 122, 0.25);
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+    }
+    .logo-main {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #D4AF7A;
+    }
+    .logo-sub {
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      font-weight: 400;
+      color: #D4AF7A;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #E8DDD2;
+      transition: color 0.2s;
+      font-size: 0.9rem;
+    }
+    .nav-links a:hover {
+      color: #D4AF7A;
+    }
+    .btn-nav {
+      background: #D4AF7A;
+      color: #0C0A09 !important;
+      padding: 0.6rem 1.6rem;
+      border-radius: 40px;
+      font-weight: 700;
+    }
+    .btn-nav:hover {
+      background: #E8C48F;
+      transform: scale(1.02);
+    }
+
+    /* HERO with real image background (haircut vibe) */
+    .hero {
+      min-height: 90vh;
+      background: linear-gradient(107deg, #0C0A09 30%, rgba(12,10,9,0.7)), url('https://images.pexels.com/photos/3998428/pexels-photo-3998428.jpeg?auto=compress&cs=tinysrgb&w=1600');
+      background-size: cover;
+      background-position: center 30%;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .hero-content {
+      max-width: 680px;
+    }
+    .hero-label {
+      color: #D4AF7A;
+      letter-spacing: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: 4.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 span {
+      color: #D4AF7A;
+      font-style: italic;
+    }
+    .hero-desc {
+      font-size: 1.1rem;
+      color: #CFC2B4;
+      margin-bottom: 2rem;
+      border-left: 2px solid #D4AF7A;
+      padding-left: 1.2rem;
+    }
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: #D4AF7A;
+      color: #0C0A09;
+      padding: 0.9rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+    .btn-outline {
+      border: 1px solid #D4AF7A;
+      color: #EFE7DF;
+      padding: 0.9rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s;
+      background: transparent;
+    }
+    .btn-primary:hover, .btn-outline:hover {
+      transform: translateY(-3px);
+      background: #E8C48F;
+      border-color: #E8C48F;
+      color: #0C0A09;
+    }
+
+    /* signature brand story */
+    .story {
+      padding: 5rem 0;
+      background: #100D0B;
+    }
+    .story-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: center;
+    }
+    .story-text {
+      flex: 1.2;
+    }
+    .story-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .story-text p {
+      color: #CBBBAE;
+      margin: 1rem 0;
+    }
+    .story-image {
+      flex: 0.9;
+      border-radius: 32px;
+      overflow: hidden;
+      height: 360px;
+      background: url('https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=800');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5);
+    }
+
+    /* SERVICES with real haircut / nails / styling images */
+    .services {
+      padding: 6rem 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      text-align: center;
+      color: #D4AF7A;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 3.5rem;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: #14110E;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: transform 0.25s;
+      border: 1px solid rgba(212, 175, 122, 0.2);
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212, 175, 122, 0.5);
+    }
+    .service-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+    .service-info {
+      padding: 1.8rem;
+    }
+    .service-info h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-tag {
+      color: #D4AF7A;
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-top: 0.8rem;
+    }
+
+    /* GALLERY real images - cuts, nails, braids */
+    .gallery {
+      padding: 3rem 0 5rem;
+      background: #0C0A09;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 24px;
+      transition: 0.2s;
+      border: 1px solid #2A241F;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.02);
+      border-color: #D4AF7A;
+    }
+
+    /* booking & contact */
+    .booking {
+      background: linear-gradient(135deg, #171310, #0C0A09);
+      border-radius: 48px;
+      margin: 2rem 0 4rem;
+      padding: 3rem;
+      border: 1px solid rgba(212, 175, 122, 0.3);
+    }
+    .booking-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+    .contact-chip {
+      background: #1E1915;
+      padding: 0.7rem 1.3rem;
+      border-radius: 60px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .contact-chip a {
+      color: #EFE7DF;
+      text-decoration: none;
+    }
+    .footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      border-top: 1px solid rgba(212, 175, 122, 0.2);
+    }
+
+    @media (max-width: 800px) {
+      .hero h1 { font-size: 3rem; }
+      .container { padding: 0 24px; }
+      .story-grid { flex-direction: column; }
+    }
